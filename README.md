@@ -1,5 +1,7 @@
 # tmpnix - an alternative to static binaries for post-exploitation
 
+*Credit for the initial tmpnix project goes to Alexander Klink @ https://git.alech.de/alech/tmpnix. Since Alexander's project has been dormant since 2019, we are updating it to work with current software versions.*
+
 ## Background
 
 If you are a penetration tester or red teamer, you might have run into the
@@ -23,7 +25,7 @@ Nix binaries and the corresponding shared libraries by default live under
 `/nix`, which will probably not exist and not be writable in case you are not
 `root`.
 
-I read in the past that it is possible (but not encouraged, because you loose
+I read in the past that it is possible (but not encouraged, because you lose
 the possibility to make use of the binary cache Nix provides for you) to change
 that directory. So I set out to build a Nix that lives under `/tmp` (or
 optionally under `/var/tmp` or some other directory you have write access to)
